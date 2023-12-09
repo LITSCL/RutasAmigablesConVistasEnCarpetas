@@ -28,7 +28,7 @@ public class GeneralControlador extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession sesion = request.getSession(false); //Se crea un objeto de tipo "HttpSession" para poder crear sesiones.
-		sesion.setAttribute("mensaje", "Este mensaje llegó desde el servlet GET"); //Se crea la sesión "mensaje" con valor "Este mensaje llegó desde el servlet GET".
+		sesion.setAttribute("mensaje", "Este mensaje llegÃ³ desde el servlet GET"); //Se crea la sesiÃ³n "mensaje" con valor "Este mensaje llegÃ³ desde el servlet GET".
 		response.sendRedirect(request.getContextPath() + "/formulario_get"); //Se redirije al usuario.
 	}
 
@@ -36,7 +36,7 @@ public class GeneralControlador extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("mensaje", "Este mensaje llegó desde el servlet POST");
+		request.setAttribute("mensaje", "Este mensaje llegÃ³ desde el servlet POST");
 		request.getRequestDispatcher("formulario_post").forward(request, response);
 	}
 }
